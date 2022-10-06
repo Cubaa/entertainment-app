@@ -1,4 +1,5 @@
-import { SxProps } from "@mui/material";
+import { SxProps } from "@mui/material"
+
 
 export const NavStyle: SxProps = {
   display: "flex",
@@ -13,5 +14,9 @@ export const NavIconsStyle: SxProps = {
 }
 
 export const NavIcon: SxProps = {
-  cursor: "pointer"
+  cursor: "pointer",
+  transition: "color .2s linear",
+  ":hover": {
+    color: "#FC4747"
+  }
 }
