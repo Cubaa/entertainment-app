@@ -1,11 +1,11 @@
-import { Grid } from '@mui/material'
-import React from 'react'
-import { SidebarMenu } from '../sidebar-menu.tsx/sidebar-menu'
+import React, { FC } from 'react';
+import { Grid } from '@mui/material';
+import { SidebarMenu } from '../sidebar-menu.tsx/sidebar-menu';
 
-export const Menu = () => {
+export const Menu: FC = () => {
   return (
-    <Grid container item py={4} pl={4}>
+    <Grid container item component="nav">
       <SidebarMenu />
     </Grid>
-  )
-}
+  );
+};

@@ -1,0 +1,21 @@
+.slick-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slick-list {
+  display: block !important;
+  width: 100%;
+}
+
+.slick-slide div {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.slick-slide img {
+  width: calc(100% - 10px) !important;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}

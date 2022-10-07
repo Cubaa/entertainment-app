@@ -1,6 +1,12 @@
-import { GlobalStyles } from "@mui/material";
 import React from "react";
+import { createTheme, GlobalStyles, ThemeProvider } from "@mui/material";
 import { Main } from "./components/main/main";
+
+const customTheme = createTheme ({
+  typography: {
+   "fontFamily": `"Outfit", "Helvetica", "Arial", sans-serif`,
+  }
+});
 
 const globalStyle = {
   body: {
@@ -9,15 +15,17 @@ const globalStyle = {
     height: "100vh",
     backgroundColor: "#10141E"
   }
-}
+};
 
 function App() {
   return (
     <>
       <GlobalStyles styles={globalStyle} />
-      <Main />
+      <ThemeProvider theme={customTheme}>
+        <Main />
+      </ThemeProvider>
     </>
   );
-}
+};
 
 export default App;

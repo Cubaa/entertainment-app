@@ -36,5 +36,5 @@ export const Nav: FC = () => {
         })}
       </Box>
     </Box>
-  )
-}
+  );
+};

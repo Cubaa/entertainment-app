@@ -1,7 +1,7 @@
 import WindowIcon from '@mui/icons-material/Window';
 import LocalMoviesIcon from '@mui/icons-material/LocalMovies';
 import LiveTvIcon from '@mui/icons-material/LiveTv';
-import BookmarkIcon from '@mui/icons-material/Bookmark';
+import TurnedInOutlinedIcon from '@mui/icons-material/TurnedInOutlined';
 import { INavLink } from './nav.interface';
 
 export const navLinks: INavLink[] = [
@@ -19,6 +19,6 @@ export const navLinks: INavLink[] = [
   },
   {
     name: "bookmark",
-    icon: <BookmarkIcon fontSize='large'/>
+    icon: <TurnedInOutlinedIcon fontSize='large'/>
   },
 ]

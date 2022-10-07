@@ -1,8 +1,8 @@
-import { Grid } from '@mui/material'
-import React, { FC } from 'react'
-import { Nav } from './nav/nav'
-import { sidebarMenuStyle } from './sidebar-menu.styled'
-import { UserImage } from './user-image/user-image'
+import React, { FC } from 'react';
+import { Grid } from '@mui/material';
+import { Nav } from './nav/nav';
+import { sidebarMenuStyle } from './sidebar-menu.styled';
+import { UserImage } from './user-image/user-image';
 
 export const SidebarMenu: FC = () => {
   return (
@@ -10,5 +10,5 @@ export const SidebarMenu: FC = () => {
       <Nav />
       <UserImage />
     </Grid>
-  )
-}
+  );
+};

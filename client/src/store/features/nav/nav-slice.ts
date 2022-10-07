@@ -1,6 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
-import { RootState } from '../../store'
+import { createSlice } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
 
 interface INavState {
   linkName: string;
@@ -8,7 +7,7 @@ interface INavState {
 
 const initialState: INavState = {
   linkName: "home",
-}
+};
 
 export const navSlice = createSlice({
   name: 'nav',
@@ -18,11 +17,8 @@ export const navSlice = createSlice({
       state.linkName = action.payload;
     }
   },
-})
+});
 
-export const { setRoute } = navSlice.actions
+export const { setRoute } = navSlice.actions;
 
-// Other code such as selectors can use the imported `RootState` type
-// export const selectCount = (state: RootState) => state.counter.value
-
-export default navSlice.reducer
+export default navSlice.reducer;

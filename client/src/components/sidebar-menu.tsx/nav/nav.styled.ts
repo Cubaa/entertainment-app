@@ -1,5 +1,4 @@
-import { SxProps } from "@mui/material"
-
+import { SxProps } from "@mui/material";
 
 export const NavStyle: SxProps = {
   display: "flex",
@@ -7,11 +6,11 @@ export const NavStyle: SxProps = {
   flexDirection: "column",
   alignItems: "center",
   paddingTop: "2.5rem"
-}
+};
 
 export const NavIconsStyle: SxProps = {
   marginTop: "8.5rem"
-}
+};
 
 export const NavIcon: SxProps = {
   cursor: "pointer",
@@ -19,4 +18,4 @@ export const NavIcon: SxProps = {
   ":hover": {
     color: "#FC4747"
   }
-}
+};
