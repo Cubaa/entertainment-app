@@ -1,6 +1,6 @@
 import { SxProps } from "@mui/material";
 
-export const trendingBookmarkStyle: SxProps = {
+export const bookmarkIconStyle: SxProps = {
   position: "absolute",
   top: "5%",
   left: "calc(100% - 70px)",

@@ -8,4 +8,4 @@ export const sliderBoxStyle: SxProps = {
   ":focus-visible": {
     outline: "none"
   },
-}
+};

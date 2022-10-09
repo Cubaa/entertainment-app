@@ -3,7 +3,6 @@ import { Box, Typography } from '@mui/material';
 import LocalMoviesIcon from '@mui/icons-material/LocalMovies';
 import { 
   trendingInfoContentStyle,
-  trendingInfoStyle,
   typoStyle,
   titleStyle,
   dotStyle,
@@ -12,10 +11,10 @@ import {
 import { ITrendingInfoProps } from './trending-info.interface';
 
 export const TrendingInfo: FC<ITrendingInfoProps> = (props) => {
-  const { data } = props;
+  const { data, sx } = props;
 
   return (
-    <Box sx={trendingInfoStyle}>
+    <Box sx={sx}>
       <Box sx={trendingInfoContentStyle}>
         <Typography component="span" sx={typoStyle}>{data.year}</Typography>
         <Box mx={1} component="span" sx={dotStyle}></Box>

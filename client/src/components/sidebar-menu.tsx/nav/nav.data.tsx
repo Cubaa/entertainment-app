@@ -18,7 +18,7 @@ export const navLinks: INavLink[] = [
     icon: <LiveTvIcon fontSize='large'/>
   },
   {
-    name: "bookmark",
+    name: "bookmarked",
     icon: <TurnedInOutlinedIcon fontSize='large'/>
   },
-]
+];
