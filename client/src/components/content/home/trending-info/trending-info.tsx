@@ -17,12 +17,12 @@ export const TrendingInfo: FC<ITrendingInfoProps> = (props) => {
     <Box sx={sx}>
       <Box sx={trendingInfoContentStyle}>
         <Typography component="span" sx={typoStyle}>{data.year}</Typography>
-        <Box mx={1} component="span" sx={dotStyle}></Box>
+        <Box component="span" sx={dotStyle}></Box>
         <Box sx={iconBox}>
           <LocalMoviesIcon fontSize='small'/>
           <Typography component="span" sx={typoStyle}>{data.category}</Typography>
         </Box>
-        <Box mr={1} component="span" sx={dotStyle}></Box>
+        <Box component="span" sx={dotStyle}></Box>
         <Typography component="span" sx={typoStyle}>{data.rating}</Typography>
       </Box>
       <Typography component="p" sx={titleStyle}>{data.title}</Typography>

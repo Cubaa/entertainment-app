@@ -1,15 +1,18 @@
+import { Bookmarked } from "../bookmarked/bookmarked";
 import { Home } from "../home/home"
+import { Movies } from "../movies/movies";
+import { TvSeries } from "../tv-series/tv-series";
 
 export const renderContent = (navLink: string): JSX.Element | null => {
   switch (navLink) {
     case "home":
       return <Home />;
     case "movies":
-      return <div style={{ color: "#fff" }}>Movies</div>;
+      return <Movies />;
     case "series":
-      return <div style={{ color: "#fff" }}>Series</div>;
+      return <TvSeries />;
     case "bookmarked":
-      return <div style={{ color: "#fff" }}>Bookmarked</div>;
+      return <Bookmarked />;
     default:
       return null;
   };

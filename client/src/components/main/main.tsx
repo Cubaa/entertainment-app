@@ -5,8 +5,23 @@ import { Menu } from "../menu/menu";
 
 export const Main: FC = () => {
   return (
-    <Grid container display="flex" flexWrap="nowrap" component="main">
-      <Grid item width="200px" py={4} pl={4} component="aside">
+    <Grid container display="flex" flexWrap="nowrap" component="main" direction={{
+      xs: "column",
+      md: "row"
+    }}>
+      <Grid item component="aside" display={{
+        xs: 'flex',
+        md: "block"
+      }} width={{
+        xs: "100%",
+        md: "200px"
+      }} py={{
+        xs: 0,
+        md: 4
+      }} pl={{
+        xs: 0,
+        md: 4
+      }}>
         <Menu />
       </Grid>
       <Grid item width="100%"  style={{ overflowX: "hidden" }} component="section">

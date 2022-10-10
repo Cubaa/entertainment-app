@@ -1,8 +1,7 @@
 import { SxProps } from "@mui/material";
 
-export const recommendedInfoStyle: SxProps  = {
-  width: "100%",
-  fontSize: "13px"
+export const listItemInfoStyle: SxProps  = {
+  width: "100%"
 };
 
 export const cardContentStyle: SxProps = {

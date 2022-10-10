@@ -10,7 +10,7 @@ export const trendingInfoContentStyle: SxProps = {
 export const typoStyle: SxProps = {
   opacity: 0.75,
   fontSize: "15px",
-  fontWeight: 300
+  fontWeight: 300,
 };
 
 export const titleStyle: SxProps = {
@@ -23,7 +23,8 @@ export const dotStyle: SxProps = {
   width: "3px",
   height: "3px",
   bgcolor: "#fff",
-  opacity: 0.5
+  opacity: 0.5,
+  margin: "0 0.5rem"
 };
 
 export const iconBox: SxProps = {

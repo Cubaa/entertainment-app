@@ -1,20 +1,29 @@
 import React, { FC } from 'react';
 import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, Typography } from '@mui/material';
-import { headingContentStyle } from '../../../../styles/shared-styles';
-import { IData } from '../../../../interfaces/data.interface';
-import { TrendingInfo } from '../trending-info/trending-info';
-import { cardContentStyle, recommendedInfoStyle } from './recommended.styled';
-import { BookmarkIcon } from '../../../shared/bookmark-icon/bookmark-icon';
-import data from '../../../../data/data.json';
+import { IData } from '../../../interfaces/data.interface';
+import { headingContentStyle } from '../../../styles/shared-styles';
+import { TrendingInfo } from '../../content/home/trending-info/trending-info';
+import { BookmarkIcon } from '../bookmark-icon/bookmark-icon';
+import { cardContentStyle, listItemInfoStyle } from './list-data.styled';
+import { getFilteredData } from '../../content/utils/get-filtered-data';
 
-export const Recommended: FC = () => {
+interface IListDataProps {
+  title: string;
+  category: string;
+}
+
+export const ListData: FC<IListDataProps> = (props) => {
+  const { title, category } = props;
+
+  const filteredData = getFilteredData(category);
+
   return (
     <Grid>
-      <Box py={4}>
-        <Typography variant="body1" component="p" sx={headingContentStyle}>Recommended for you</Typography>
+      <Box>
+        <Typography variant="body1" component="p" sx={headingContentStyle}>{title}</Typography>
       </Box>
       <Grid display="flex" flexWrap="wrap" width="100%">
-        {data.map((item: IData, index: number) => {
+        {filteredData.map((item: IData, index: number) => {
           return (
             <Grid item xs={12} sm={12} md={4} lg={3} xl={3} key={index}>
               <Card sx={{  margin: "20px 20px 20px 0" }}>
@@ -27,7 +36,7 @@ export const Recommended: FC = () => {
                   />
                   <BookmarkIcon isBookmarked={item.isBookmarked}/>
                   <CardContent sx={cardContentStyle}>
-                    <TrendingInfo data={item} sx={recommendedInfoStyle} />
+                    <TrendingInfo data={item} sx={listItemInfoStyle} />
                     <Typography variant="body2" color="text.secondary">
                       {item.title}
                     </Typography>
